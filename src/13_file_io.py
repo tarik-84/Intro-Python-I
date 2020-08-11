@@ -10,7 +10,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-with open("foo.txt", "r") as f:
+with open('foo.txt') as f:
     print(f.read())
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -19,8 +19,12 @@ with open("foo.txt", "r") as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open("bar.text", "w") as b:
-    b.write("Here" + "\n" + "we" + "\n"+ "are")
-
-with open("bar.text", "r") as b:
-    print(b.read())
+y = open("bar.txt", "w")
+y.write("this is first line.\n")
+y.write("this is second line.\n")
+y.write("this is third line.")
+y.close()
+print(y.closed)
+with open("bar.txt") as y:
+  print("\n" + y.read())
+print(y.closed)

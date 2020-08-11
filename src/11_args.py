@@ -48,8 +48,8 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**kwargs):
-    for key in kwargs:
-        print(f"key: {key}, value: {kwargs[key]}")
+    for k, v in kwargs.items():
+        print(f"key: {k}, value: {v}")
 
 # Should print
 # key: a, value: 12
